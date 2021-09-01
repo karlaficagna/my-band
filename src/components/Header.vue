@@ -11,9 +11,9 @@
           <p class="header__text">Apoido por mais 50 mil manos</p>
           <nav class="menu">
             <ul>
-              <li>Home</li>
+              <li><router-link to="/">Home </router-link></li>
               <li>Biografia</li>
-              <li>Notícias</li>
+              <li><router-link to="/noticias">Notícias</router-link></li>
             </ul>
           </nav>
         </div>
@@ -89,7 +89,4 @@
 .menu ul li:hover {
   background-color: #333;
 }
-
-
-
 </style>
