@@ -25,37 +25,37 @@ export default {
     return {
       albuns : [
         {
-          name: 'Nada como um dia apos um outro dia',
+          name: 'Legião Urbana',
           img: require('../assets/album1.png'),
           link: 'https://www.youtube.com/watch?v=eRUa-1kTvT4'
         },
         {
-          name: 'Core e Valores',
+          name: 'Dois',
           img: require('../assets/album2.png'),
           link: 'https://www.youtube.com/watch?v=B3YHbLnWRg0'
         },
         {
-          name: 'Sobrevivendo ao Inferno',
+          name: 'Que Pais é Este',
           img: require('../assets/album3.png'),
           link: 'https://www.youtube.com/watch?v=fVQ3YYnic2o'
         },
         {
-          name: 'Raio-x do Brasil',
+          name: 'As Quatro Estações',
           img: require('../assets/album4.png'),
           link: 'https://www.youtube.com/watch?v=mz01TmFojDE&list=PLcbqoj6PmK67UM3yHwVU3ZEDv7FEogN7h'
         },
         {
-          name: 'Escolha sue caminho',
+          name: 'A Tempestade',
           img: require('../assets/album5.png'),
           link: 'https://www.youtube.com/watch?v=2KqErUelgyc'
         },
         {
-          name: 'Holocausto Urbano',
+          name: 'Mais do Mesmo',
           img: require('../assets/album6.png'),
           link: 'https://www.youtube.com/watch?v=sXRE3OtRjZE'
         },
         {
-          name: 'Consciencia black',
+          name: 'Musica para Acampamento',
           img: require('../assets/album7.png'),
           link: 'https://www.youtube.com/watch?v=4khNAOIb5gA'
         }

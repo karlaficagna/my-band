@@ -8,7 +8,7 @@
           </h1>
         </div>
         <div class="col-md-6 header__right">
-          <p class="header__text">Apoido por mais 50 mil manos</p>
+          <p class="header__text">Seguido por gerações</p>
           <nav class="menu">
             <ul>
               <li><router-link to="/">Home </router-link></li>
@@ -41,13 +41,13 @@
   }
 
   .logo{
-    width: 160px;
+    width: 100px;
     padding: 0px;
-    margin-top: 15px;
+    margin-top: 0px;
   }
 
   .logo__img{
-    width: 100%;
+    width: 80%;
   }
 
   .header__text {

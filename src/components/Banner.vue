@@ -46,7 +46,7 @@
     height : 700px;
     background-color : #212121;
     position : relative;
-    color : #e2e2e2;
+    color : #860404;
     overflow: hidden;
   }
 
@@ -98,7 +98,7 @@
     margin-left : 70px;
     width : 170px;
     height: 40px;
-    background-color: #e2e2e2;
+    background-color: #575252;
     color: #212121;
     border: none;
     font-size: 18px;

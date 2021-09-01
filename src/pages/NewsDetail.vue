@@ -1,54 +1,52 @@
 <template>
-  <div>
-    {{newDetail.title}}
-    <img :src="newDetail.img" /> 
+  <div class="new-details">
+    <Header />
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>{{ newDetail.title }}</h2>
+            <img :src="newDetail.img" />
+            <p>{{ newDetail.text }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 <script>
+import Header from "../components/Header.vue";
 export default {
-  name : "NewsDetail",
+  name: "NewsDetail",
+  components: {
+    Header,
+  },
   data: function () {
     return {
-      newDetail : {},
-      news: [
-        {
-          id: 1,
-          title: "Lorem Ipsum is",
-          text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-              when an unknown printer took a galley of type and scrambled it to make a type specimen book. `,
-          img: require('../assets/news1.png')
-        },
-        {
-          id : 2,
-          title: "Lorem Ipsum is",
-          text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-              when an unknown printer took a galley of type and scrambled it to make a type specimen book. `,
-          img: require('../assets/news2.png')
-        },
-        {
-          id : 3,
-          title: "Lorem Ipsum is",
-          text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-              when an unknown printer took a galley of type and scrambled it to make a type specimen book. `,
-          img: require('../assets/news3.png')
-        },
-      ]
-    }
+      newDetail: {},
+    };
   },
-  created: function() {
-    const result = this.news.filter((el)=>{
-      return el.id === parseInt(this.$route.params.id)
-    });    
-
-    console.log('====', result)
-    this.newDetail = result[0]
-  }
-
-}
+  methods: {
+    getNewByID: async function () {
+      const result = await fetch(
+        "http://localhost:3000/noticias/" + this.$route.params.id
+      )
+        .then((res) => res.json())
+        .catch((error) => {
+          return {
+            error: true,
+            message: error,
+          };
+        });
+      if (!result.error) {
+        this.newDetail = result;
+      }
+    },
+  },
+  created: function () {
+    this.getNewByID();
+  },
+};
 </script>
 <style>
-  
 </style>
